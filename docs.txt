@@ -36,5 +36,7 @@ Bitwise Xor
 Logical Not
 ~ $
 Bitwise Not
+~ $ $
+String concatenation
 := $ $
 Setting of a variable
