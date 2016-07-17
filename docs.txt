@@ -1,20 +1,23 @@
 Documentation of the commands and their names.
-Arithmetic:
 
-("+" <A>)
-+ <A>
+$ means and argument, and the syntax
+n0 n1 ...
+is really
+("n0",n1,...)
 
-("+" <A> <B>)
-<A> + <B>
-
-("-" <A>)
-- <A>
-
-("-" <A> <B>)
-<A> - <B>
-
-("*" <A> <B>)
-<A> * <B>
-
-("/" <A> <B>)
-<A> / <B> (integers)
++ $
+Identity
++ $ $
+Addition
+- $
+Negation
+- $ $
+Subtraction
+* $ $
+Multiplication
+/ $ $
+Integer division
+% $
+Absolute Value
+% $ $
+Remainder
