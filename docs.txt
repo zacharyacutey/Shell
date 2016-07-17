@@ -72,3 +72,15 @@ Exits
 Returns the STRING length
 ## $
 Returns the ARRAY LENGTH
+] $ $
+Writes the first to the second, erasing the file, APPENDS A NEW LINE
+]. $ $
+Writes the first to the second, erasing, NO NEW LINE
+[ $
+Reads the file
+ls
+Returns A list of all the files and dirs in the directory
+cd
+Returns the current directory
+cd $
+Changes the directory to that directory
