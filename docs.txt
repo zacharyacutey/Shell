@@ -1,10 +1,4 @@
 Documentation of the commands and their names.
-
-$ means and argument, and the syntax
-n0 n1 ...
-is really
-("n0",n1,...)
-
 + $
 Identity
 + $ $
@@ -21,3 +15,22 @@ Integer division
 Absolute Value
 % $ $
 Remainder
+= $ $
+Equality
+!= $ $
+Inequality
+< $ $
+<= $ $
+> $ $
+>= $ $
+Comparison, as you'd expect with integers
+& $ $
+Bitwise And
+| $ $
+Bitwise Or
+^ $ $
+Bitwise Xor
+! $
+Logical Not
+~ $
+Bitwise Not
