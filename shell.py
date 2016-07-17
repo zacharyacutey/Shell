@@ -75,3 +75,7 @@ def shell(parenthed):
       return argv[1]
     else:
       return argv[2]
+def run(s):
+  global namespace
+  return eval(parse(s),{"namespace":namespace})
+  
