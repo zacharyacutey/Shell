@@ -20,4 +20,19 @@ def shell(parenthed):
   command = parenthed[0]
   argv = parenthed[1:]
   
-  
+  if command == "+" and len(argv) == 1:
+    return argv[0]
+  elif command == "+" and len(argv) == 2:
+    return str(int(argv[0])+int(argv[1]))
+  elif command == "-" and len(argv) == 1:
+    return str(-int(argv[0]))
+  elif command == "-" and len(argv) == 2:
+    return str(int(argv[0])-int(argv[1]))
+  elif command == "*" and len(argv) == 2:
+    return str(int(argv[0])*int(arg[0]))
+  elif command == "/" and len(argv) == 2:
+    return str(int(int(argv[0])/int(argv[0])))
+  elif command == "%" and len(argv) == 1:
+    return str(abs(int(argv[0])))
+  elif command == "%" and len(argv) == 2:
+    return str(int(argv[0])%int(argv[1]))
