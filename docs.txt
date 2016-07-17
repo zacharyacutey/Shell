@@ -46,3 +46,9 @@ Getting the character from an integer
 Getting an integer from a charcter
 ? $ $ $
 Ternary operator, as in C
+if $ $
+If conditional, executes second argument IF ...
+ifelse $ $ $
+If-Else conditional, executes second IF, third ELSE
+while $ $
+While conditional, executes the first, IF then executes second. Repeats until execution is 0.
