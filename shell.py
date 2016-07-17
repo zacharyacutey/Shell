@@ -1,3 +1,4 @@
+RUN_SHELL = False
 namespace = {}
 def parse(arg):
   res = ""
@@ -71,6 +72,8 @@ def shell(parenthed):
     return chr(int(argv[0]))
   elif command == "@" and len(argv) == 1:
     return str(ord(argv[0]))
+  elif command == "@" and len(argv) == 2:
+    return argv[0].split("`")[int(argv[1])]
   elif command == "?" and len(argv) == 3:
     if bool(int(argv[0])):
       return argv[1]
@@ -97,7 +100,26 @@ def shell(parenthed):
     sys.write(argv[0])
   elif command == "writeln" and len(argv) == 1:
     print(argv[0])
+  elif command == " ":
+    return "`".join(argv)
+  elif command == "@:=" and len(argv) == 3:
+    s = argv[0].split("`")
+    s[int(argv[1])] = argv[2]
+    return "`".join(argv)
+  elif command == "~~" and len(argv) == 2:
+    return argv[0]+"`"+argv[1]
+  elif command == "exit" and len(argv) == 0:
+    import sys
+    sys.exit()
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
-  
+def read_input():
+  try:
+    return raw_input()
+  except:
+    return input()
+if RUN_SHELL:
+  while True:
+    s = read_input()
+    print(run(s))
