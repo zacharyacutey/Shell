@@ -44,6 +44,8 @@ Setting of a variable
 Getting the character from an integer
 @ $
 Getting an integer from a charcter
+@ $ $
+Indexes a list
 ? $ $ $
 Ternary operator, as in C
 if $ $
@@ -54,3 +56,13 @@ while $ $
 While conditional, executes the first, IF then executes second. Repeats until execution is 0.
 do $
 Executes its argument
+write $
+Writes to stdout without new line
+writeln $
+write but WITH a new line
+ $ ... Space is used
+Creates a list of its arguments (Can't use `)
+@:= $ $ $
+Replaces the first arg's index (the second arg) with the third arg.
+~~ $ $
+Concatenates two lists, or appends an item onto a list
