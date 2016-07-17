@@ -117,6 +117,31 @@ def shell(parenthed):
     return len(argv[0])
   elif command == "##" and len(argv) == 1:
     return len(argv[0].split("`"))
+  elif command == "]" and len(argv) == 2:
+    s = open(argv[1],"w")
+    s.write(argv[0]+"\n")
+    s.close()
+    return argv[0]+"\n"
+  elif command == "]." and len(argv) == 2:
+    s = open(argv[1],"w")
+    s.write(argv[0])
+    s.close()
+    return argv[0]
+  elif command == "[" and len(argv) == 1:
+    s = open(argv[0],"r")
+    txt = s.read()
+    s.close()
+    return txt
+  elif command == "]]" and len(argv) == 2:
+    s = open(argv[1],"a")
+    s.write(argv[0]+"\n")
+    s.close()
+    return argv[0]+"\n"
+  elif command == "]]." and len(argv) == 2:
+    s = open(argv[1],"a")
+    s.write(argv[0])
+    s.close()
+    return argv[0]
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
