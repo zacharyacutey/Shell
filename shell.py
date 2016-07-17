@@ -105,7 +105,7 @@ def shell(parenthed):
   elif command == "@:=" and len(argv) == 3:
     s = argv[0].split("`")
     s[int(argv[1])] = argv[2]
-    return "`".join(argv)
+    return "`".join(s)
   elif command == "~~" and len(argv) == 2:
     return argv[0]+"`"+argv[1]
   elif command == "exit" and len(argv) == 0:
@@ -122,4 +122,4 @@ def read_input():
 if RUN_SHELL:
   while True:
     s = read_input()
-    print(run(s))
+    print('"'+run(s)+'"')
