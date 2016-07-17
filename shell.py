@@ -75,6 +75,22 @@ def shell(parenthed):
       return argv[1]
     else:
       return argv[2]
+  elif command == "if" and len(argv) == 2:
+    if bool(int(argv[0])):
+      return run(argv[1])
+  elif command == "ifelse" and len(argv) == 3:
+    if bool(int(argv[0])):
+      return run(argv[1])
+    else:
+      return run(argv[2])
+  elif command == "while" and len(argv) == 2:
+    while True:
+      s = run(argv[0])
+      t = run(argv[1])
+      if bool(int(s)):
+        return t
+  elif command == "do" and len(argv) == 1:
+    return run(argv[0])
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace})
