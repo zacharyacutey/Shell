@@ -92,6 +92,11 @@ def shell(parenthed):
         return t
   elif command == "do" and len(argv) == 1:
     return run(argv[0])
+  elif command == "write" and len(argv) == 1:
+    import sys
+    sys.write(argv[0])
+  elif command == "writeln" and len(argv) == 1:
+    print(argv[0])
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
