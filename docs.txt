@@ -44,3 +44,5 @@ Setting of a variable
 Getting the character from an integer
 @ $
 Getting an integer from a charcter
+? $ $ $
+Ternary operator, as in C
