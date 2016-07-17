@@ -142,6 +142,16 @@ def shell(parenthed):
     s.write(argv[0])
     s.close()
     return argv[0]
+  elif command == "cd" and len(argv) == 0:
+    import os
+    return os.getcwd()
+  elif command == "cd" and len(argv) == 1:
+    import os
+    os.chdir(argv[0])
+    return os.getcwd()
+  elif command == "ls":
+    import os
+    return '`'.join(os.listdir(os.getcwd()))
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
