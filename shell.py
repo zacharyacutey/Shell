@@ -98,8 +98,10 @@ def shell(parenthed):
   elif command == "write" and len(argv) == 1:
     import sys
     sys.write(argv[0])
+    return ""
   elif command == "writeln" and len(argv) == 1:
     print(argv[0])
+    return ""
   elif command == " ":
     return "`".join(argv)
   elif command == "@:=" and len(argv) == 3:
@@ -111,6 +113,10 @@ def shell(parenthed):
   elif command == "exit" and len(argv) == 0:
     import sys
     sys.exit()
+  elif command == "#" and len(argv) == 1:
+    return len(argv[0])
+  elif command == "##" and len(argv) == 1:
+    return len(argv[0].split("`"))
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
