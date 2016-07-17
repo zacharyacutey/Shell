@@ -66,3 +66,9 @@ Creates a list of its arguments (Can't use `)
 Replaces the first arg's index (the second arg) with the third arg.
 ~~ $ $
 Concatenates two lists, or appends an item onto a list
+exit
+Exits
+# $
+Returns the STRING length
+## $
+Returns the ARRAY LENGTH
