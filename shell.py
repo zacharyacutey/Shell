@@ -66,3 +66,8 @@ def shell(parenthed):
     s = argv[1]
     namespace[argv[0]] = argv[1]
     return s
+  elif command == "'" and len(argv) == 1:
+    return chr(int(argv[0]))
+  elif command == "@" and len(argv) == 1:
+    return str(ord(argv[0]))
+  
