@@ -48,3 +48,13 @@ def shell(parenthed):
     return str(int(int(argv[0])<int(argv[1])))
   elif command == "<=" and len(argv) == 2:
     return str(int(int(argv[0])<=int(argv[1])))
+  elif command == "&" and len(argv) == 2:
+    return str(int(argv[0])&int(argv[1]))
+  elif command == "|" and len(argv) == 2:
+    return str(int(argv[0])|int(argv[1]))
+  elif command == "^" and len(argv) == 2:
+    return str(int(argv[0])^int(argv[1]))
+  elif command == "!" and len(argv) == 1:
+    return str(int(not bool(int(argv[0]))))
+  elif command == "~" and len(argv) == 1:
+    return str(~int(argv[0]))
