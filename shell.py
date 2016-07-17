@@ -1,6 +1,7 @@
 namespace = {}
 def parse(arg):
   res = ""
+  i = 0
   while i != len(arg):
     if arg[i] == '(':
       res += "shell(["
@@ -93,5 +94,5 @@ def shell(parenthed):
     return run(argv[0])
 def run(s):
   global namespace
-  return eval(parse(s),{"namespace":namespace})
+  return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
   
