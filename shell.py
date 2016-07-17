@@ -70,4 +70,8 @@ def shell(parenthed):
     return chr(int(argv[0]))
   elif command == "@" and len(argv) == 1:
     return str(ord(argv[0]))
-  
+  elif command == "?" and len(argv) == 3:
+    if bool(int(argv[0])):
+      return argv[1]
+    else:
+      return argv[2]
