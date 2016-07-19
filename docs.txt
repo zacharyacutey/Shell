@@ -88,3 +88,5 @@ cd
 Returns the current directory
 cd $
 Changes the directory to that directory
+readln
+I FORGOT ABOUT INPUT
