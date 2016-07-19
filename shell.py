@@ -152,6 +152,11 @@ def shell(parenthed):
   elif command == "ls":
     import os
     return '`'.join(os.listdir(os.getcwd()))
+  elif command == "readln":
+    try:
+      return raw_input()
+    except:
+      return input()
 def run(s):
   global namespace
   return eval(parse(s),{"namespace":namespace,"shell":shell,"parse":parse,"run":run})
